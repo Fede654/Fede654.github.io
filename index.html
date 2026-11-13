@@ -22,11 +22,16 @@
   "name": "Federico Bonino",
   "jobTitle": "Applied AI \u0026 Automation Consultant",
 "url": "https://fede654.github.io/",  "sameAs": ["https://github.com/fede654", "https://linkedin.com/in/fede-azul"],
-  "affiliation": {
-    "@type": "Organization",
-    "name": "AlterMundi",
-    "url": "https://altermundi.net/"
-  }
+  "affiliation": [
+{
+      "@type": "OrganizationRole",
+      "roleName": "Technical lead",
+"startDate": "2024-06","endDate": "2026-08",      "affiliation": {
+        "@type": "Organization",
+        "name": "AlterMundi",
+        "url": "https://altermundi.net/"
+      }
+    }  ]
 }
 </script>
 <style>
@@ -452,24 +457,23 @@
   <section class="section-grid shell" id="about" aria-labelledby="about-title">
     <div class="section-heading">
       <p class="section-code">00 / Position</p>
-      <h2 id="about-title">From signal to system</h2>
+      <h2 id="about-title">Understand first, then build</h2>
     </div>
     <div class="section-content bio">
-      <p>I got here from the physical layer. Electronics and C first, then a long
-relationship with GNU/Linux, then eleven years keeping a 24/7 live television
-signal on air — where the failure is already on screen and the time budget is
-the length of the incident. That is still the standard I hold a system to: it
-has to survive being left alone, and someone who did not install it has to be
-able to operate it.</p>
+      <p>For the last six years I have been the technology partner of BM Estudio
+Contable, an accounting practice with more than a hundred clients. It started
+with the office network and server and grew into mapping how information moves
+through the firm, then building the internal tool it runs on every day and a
+client portal now in pilot. The process map came first: every application
+derives its requirements from it, not the other way round.</p>
       <p>At AlterMundi — a twelve-person organisation building free infrastructure for
 community networks — I ran the infrastructure, helped stand up an independent
 Autonomous System, and architected SAI, a wildfire early-detection pilot whose
-edge nodes watched the Córdoba hills unattended for months. Across those
-systems I keep architecture, constraints, review, verification, deployment and
-operation explicit.</p>
-      <p>I am now building an independent applied-AI practice focused on researching the
-right solution before building, automating business processes, and practical AI
-training. The proposition is new; the engineering record behind it is not.</p>
+edge nodes watched the Córdoba hills unattended for months.</p>
+      <p>I develop with coding agents under explicit architecture, review and
+verification, and I am now building an independent applied-AI practice:
+research the right solution before building, automate the processes an
+organisation already has, and leave the team able to run what it receives.</p>
     </div>
   </section>
 
@@ -479,6 +483,39 @@ training. The proposition is new; the engineering record behind it is not.</p>
       <h2 id="work-title">Selected work</h2>
     </div>
     <div class="section-content work-list">
+      <article class="entry">
+        <span class="entry-index" aria-hidden="true"></span>
+        <div class="entry-body">
+          <h3>Technology partner — accounting practice</h3>
+          <p class="meta">
+<a href="https://bmestudiocontable.com/">BM Estudio Contable (client, Santa Rosa, Argentina)</a> · Infrastructure, process analysis and software development ·
+            <time datetime="2020-01">2020-01</time> –
+Present          </p>
+          <p class="entry-summary">Continuous, growing engagement with a 100+ client accounting practice since 2020: from building and running its office infrastructure, to mapping how information moves through the firm, to software now used in daily operations and a client portal in pilot. Built with agent-assisted development under explicit architecture, review and verification. About 1,200 commits across five private repositories.</p>
+        </div>
+      </article>
+      <article class="entry child">
+        <span class="entry-index" aria-hidden="true"></span>
+        <div class="entry-body">
+          <h3>Client portal and accounting engine (pilot)</h3>
+          <p class="meta">
+Architecture and implementation ·
+            <time datetime="2026-09">2026-09</time> –
+Present          </p>
+          <p class="entry-summary">Client portal and studio console over a deterministic accounting engine: clients record payments, collections and commitments and see their cash position and deadlines; the firm reviews them against records imported from its legacy accounting system and documents from the tax-authority portal. In pilot with a real client.</p>
+        </div>
+      </article>
+      <article class="entry child">
+        <span class="entry-index" aria-hidden="true"></span>
+        <div class="entry-body">
+          <h3>BM Utilidades — internal operations tool</h3>
+          <p class="meta">
+Concept, architecture and implementation ·
+            <time datetime="2025-05">2025-05</time> –
+Present          </p>
+          <p class="entry-summary">Web application for a 100+ client accounting practice: unified client data, automated retrieval from the AFIP tax portal, format conversion and document preprocessing for ingestion and migration between accounting software. In daily use by the firm, within a continuous engagement that began with its office infrastructure in 2020.</p>
+        </div>
+      </article>
       <article class="entry">
         <span class="entry-index" aria-hidden="true"></span>
         <div class="entry-body">
@@ -493,17 +530,6 @@ training. The proposition is new; the engineering record behind it is not.</p>
       <article class="entry child">
         <span class="entry-index" aria-hidden="true"></span>
         <div class="entry-body">
-          <h3>Infrastructure-as-code and operations</h3>
-          <p class="meta">
-Design, infrastructure-as-code and operations ·
-            <time datetime="2026-02">2026-02</time> –
-<time datetime="2026-08">2026-08</time>          </p>
-          <p class="entry-summary">Infrastructure-as-code and day-to-day operations for AlterMundi&#39;s services on three hosts — a Proxmox VE 9 primary, a legacy PVE/BGP gateway and a public inference host — and about fifteen LXC containers, described in a machine-readable inventory that is the source of truth. Firewall, networking and secrets conventions, backup and restore runbooks, post-mortems, an infrastructure review and a phased hardening plan out of it. Left operable by people who did not install it.</p>
-        </div>
-      </article>
-      <article class="entry child">
-        <span class="entry-index" aria-hidden="true"></span>
-        <div class="entry-body">
           <h3>SAI — distributed wildfire early detection (validated pilot)</h3>
           <p class="meta">
 Architect and lead developer ·
@@ -513,21 +539,6 @@ Architect and lead developer ·
           <div class="evidence" aria-label="Public evidence for SAI — distributed wildfire early detection (validated pilot)">
             <span class="evidence-label">Public evidence</span>
               <a href="https://github.com/AlterMundi/sai-cam">sai-cam <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </article>
-      <article class="entry child">
-        <span class="entry-index" aria-hidden="true"></span>
-        <div class="entry-body">
-          <h3>44Mesh — independent Autonomous System with BGP peering</h3>
-          <p class="meta">
-Main contributor — border router and mesh ·
-            <time datetime="2025-11">2025-11</time> –
-<time datetime="2026-07">2026-07</time>          </p>
-          <p class="entry-summary">Tooling and runbooks to operate an independent Autonomous System: announce an IP block to the Internet via eBGP from a border router, join distributed nodes over a ZeroTier mesh, and host public services on community-owned addresses. Main contributor alongside three AlterMundi colleagues.</p>
-          <div class="evidence" aria-label="Public evidence for 44Mesh — independent Autonomous System with BGP peering">
-            <span class="evidence-label">Public evidence</span>
-              <a href="https://github.com/AlterMundi/44mesh">44mesh <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </article>
@@ -569,7 +580,6 @@ Independent project · Design, implementation and maintenance ·
 Canal Showsport S.A. · Staff technician — broadcast operations and reliability ·
             <time datetime="2011-11">2011-11</time> –
 <time datetime="2022-12">2022-12</time>          </p>
-          <p class="entry-summary">Eleven years keeping a 24/7 live television signal on air — Cablevisión Flow, provincial cable network and streaming platforms — with no maintenance window, resolving incidents while the signal remained live.</p>
         </div>
       </article>
     </div>
@@ -607,21 +617,14 @@ Canal Showsport S.A. · Staff technician — broadcast operations and reliabilit
         </ul>
       </section>
       <section class="stack-group" aria-labelledby="skill-group-4">
-        <h3 id="skill-group-4">Hardware</h3>
+        <h3 id="skill-group-4">Domains</h3>
         <ul>
-          <li>KiCad</li>
-          <li>ESP32</li>
-        </ul>
-      </section>
-      <section class="stack-group" aria-labelledby="skill-group-5">
-        <h3 id="skill-group-5">Domains</h3>
-        <ul>
+          <li>Business process analysis and automation</li>
           <li>Linux infrastructure design and operations</li>
           <li>Systems software and Linux daemons</li>
           <li>Computer vision on edge</li>
           <li>Mesh networking and BGP</li>
           <li>Embedded systems and electronics</li>
-          <li>Broadcast reliability</li>
         </ul>
       </section>
     </div>
