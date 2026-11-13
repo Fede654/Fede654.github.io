@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Applied AI &amp; automation consultant at Tensoria Consulting. I turn manual, scattered processes into systems that work, with AI where it adds value.">
 <meta name="theme-color" content="#f1efe7">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%239f3416'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23ffffff'%3EFB%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%239f3416'/%3E%3Ctext x='31' y='50' text-anchor='middle' font-family='Georgia,serif' font-size='56' font-style='italic' font-weight='700' letter-spacing='-5' fill='%23fff'%3Efb%3C/text%3E%3C/svg%3E">
 <link rel="preload" href="fonts/charis-sil-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Federico Bonino — Applied AI &amp; Automation Consultant">
@@ -71,6 +71,10 @@
     --display: "Charis SIL", Charter, "Bitstream Charter", Georgia, serif;
     --mono: "IBM Plex Mono", "Cascadia Code", "Liberation Mono", monospace;
     --max: 86rem;
+    /* Columna de números de "Selected work" y su separación. La bio usa la
+       misma medida para que su texto arranque en la línea de las entradas. */
+    --index-col: 4rem;
+    --index-gap: clamp(1rem, 3vw, 2.5rem);
   }
 
   * { box-sizing: border-box; }
@@ -255,11 +259,14 @@
     border-bottom: 1px solid var(--ink);
   }
 
-  .section-heading { padding: 4rem 3rem 4rem 0; }
+  /* El título escala con su columna, no con la ventana: la columna deja de
+     crecer en el ancho máximo y con vw la palabra más larga ("Understand")
+     cruzaba el filete. 18cqi deja entrar una palabra de ~10 letras. */
+  .section-heading { padding: 4rem 3rem 4rem 0; container-type: inline-size; }
   .section-heading h2 {
     max-width: 9ch;
     margin: 1rem 0 0;
-    font-size: clamp(2rem, 3.5vw, 3.8rem);
+    font-size: clamp(1.9rem, 18cqi, 3.6rem);
     font-weight: 400;
     letter-spacing: -.035em;
     line-height: .95;
@@ -268,8 +275,8 @@
 
   .section-content { border-left: 1px solid var(--ink); padding: 4rem clamp(2rem, 5vw, 5rem); }
 
-  .bio { display: grid; gap: 1.5rem; max-width: 42rem; }
-  .bio p { margin: 0; font-size: clamp(1.15rem, 1.4vw, 1.4rem); line-height: 1.5; }
+  .bio { display: grid; gap: 1.5rem; }
+  .bio p { max-width: 42rem; margin: 0 0 0 calc(var(--index-col) + var(--index-gap)); font-size: clamp(1.15rem, 1.4vw, 1.4rem); line-height: 1.5; }
   .bio p:first-child::first-letter {
     float: left;
     margin: .08em .12em 0 0;
@@ -282,8 +289,8 @@
   .entry {
     position: relative;
     display: grid;
-    grid-template-columns: 4rem minmax(0, 1fr);
-    gap: clamp(1rem, 3vw, 2.5rem);
+    grid-template-columns: var(--index-col) minmax(0, 1fr);
+    gap: var(--index-gap);
     padding: 0 0 3.5rem;
   }
   .entry:not(.child) { counter-increment: work; counter-reset: sub; }
@@ -299,7 +306,7 @@
   /* Un proyecto dentro de la entrada de arriba: numeración 01.1, sangría,
      filete continuo en el color de señal y sin separador propio. */
   .entry:has(+ .entry.child) { padding-bottom: 1.75rem; }
-  .entry.child { counter-increment: sub; margin-left: 4rem; padding-left: 1.5rem; }
+  .entry.child { counter-increment: sub; margin-left: var(--index-col); padding-left: 1.5rem; }
   .entry + .entry.child { border-top: 0; padding-top: 1.75rem; }
   .entry.child::after {
     position: absolute;
@@ -408,7 +415,8 @@
     .section-heading h2 { max-width: none; }
     .section-content { padding: 0 0 3.5rem; }
     .capabilities, .background-list, .elsewhere { grid-template-columns: 1fr; }
-    .entry { grid-template-columns: 2.8rem minmax(0, 1fr); gap: .7rem; }
+    :root { --index-col: 2.8rem; --index-gap: .7rem; }
+    .bio p { margin-left: 0; }
     .entry.child { margin-left: 1.2rem; padding-left: 1rem; }
     .stack-group:nth-child(2) { padding-top: 2rem; border-top: 1px solid var(--rule); }
     footer { grid-template-columns: 1fr; }
