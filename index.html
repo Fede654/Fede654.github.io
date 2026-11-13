@@ -3,17 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Applied AI &amp; Automation Consultant — building an independent practice for AI solution discovery, business automation and practical training, backed by long experience in Linux infrastructure, edge systems and production operations.">
+<meta name="description" content="Applied AI &amp; automation consultant at Tensoria Consulting. I turn manual, scattered processes into systems that work, with AI where it adds value.">
 <meta name="theme-color" content="#f1efe7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%239f3416'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23ffffff'%3EFB%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/charis-sil-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Federico Bonino — Applied AI &amp; Automation Consultant">
-<meta property="og:description" content="Applied AI &amp; Automation Consultant — building an independent practice for AI solution discovery, business automation and practical training, backed by long experience in Linux infrastructure, edge systems and production operations.">
+<meta property="og:description" content="Applied AI &amp; automation consultant at Tensoria Consulting. I turn manual, scattered processes into systems that work, with AI where it adds value.">
 <meta property="og:site_name" content="Federico Bonino">
 <meta property="og:url" content="https://fede654.github.io/">
+<meta property="og:image" content="https://fede654.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Federico Bonino: I help organisations turn manual, scattered processes into systems that work — using AI where it adds value, and deterministic software where certainty is required.">
+<meta name="twitter:image" content="https://fede654.github.io/og-image.png">
 <link rel="canonical" href="https://fede654.github.io/">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Federico Bonino — Applied AI &amp; Automation Consultant">
-<meta name="twitter:description" content="Applied AI &amp; Automation Consultant — building an independent practice for AI solution discovery, business automation and practical training, backed by long experience in Linux infrastructure, edge systems and production operations.">
+<meta name="twitter:description" content="Applied AI &amp; automation consultant at Tensoria Consulting. I turn manual, scattered processes into systems that work, with AI where it adds value.">
 <title>Federico Bonino — Applied AI &amp; Automation Consultant</title>
 <script type="application/ld+json">
 {
@@ -21,9 +28,18 @@
   "@type": "Person",
   "name": "Federico Bonino",
   "jobTitle": "Applied AI \u0026 Automation Consultant",
-"url": "https://fede654.github.io/",  "sameAs": ["https://github.com/fede654", "https://linkedin.com/in/fede-azul"],
+  "description": "Applied AI \u0026 automation consultant at Tensoria Consulting. I turn manual, scattered processes into systems that work, with AI where it adds value.",
+"url": "https://fede654.github.io/","email": "contacto@tensoriaconsulting.com",  "sameAs": ["https://github.com/fede654", "https://linkedin.com/in/fede-azul"],
   "affiliation": [
 {
+      "@type": "OrganizationRole",
+      "roleName": "Consultant",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Tensoria Consulting",
+        "url": "https://tensoriaconsulting.com/"
+      }
+    },{
       "@type": "OrganizationRole",
       "roleName": "Technical lead",
 "startDate": "2024-06","endDate": "2026-08",      "affiliation": {
@@ -35,6 +51,12 @@
 }
 </script>
 <style>
+  @font-face { font-family: "Charis SIL"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/charis-sil-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Charis SIL"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/charis-sil-400-italic.woff2") format("woff2"); }
+  @font-face { font-family: "Charis SIL"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/charis-sil-700-normal.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-mono-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/ibm-plex-mono-700-normal.woff2") format("woff2"); }
+
   :root {
     color-scheme: light;
     --paper: #f1efe7;
@@ -46,9 +68,8 @@
     --signal: #9f3416;
     --signal-soft: #e5a28a;
     --focus: #005063;
-    --terminal: #224a36;
-    --display: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
-    --mono: "Berkeley Mono", "Cascadia Code", "IBM Plex Mono", "Liberation Mono", monospace;
+    --display: "Charis SIL", Charter, "Bitstream Charter", Georgia, serif;
+    --mono: "IBM Plex Mono", "Cascadia Code", "Liberation Mono", monospace;
     --max: 86rem;
   }
 
@@ -72,6 +93,8 @@
   a { color: inherit; text-decoration-thickness: .08em; text-underline-offset: .2em; }
   a:hover { color: var(--signal); }
   a:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+
+  time, .date-range { white-space: nowrap; }
 
   .skip-link {
     position: fixed;
@@ -126,22 +149,20 @@
   .site-nav { justify-self: center; }
   .site-nav ul { display: flex; gap: clamp(1rem, 2.5vw, 2.4rem); margin: 0; padding: 0; list-style: none; }
   .site-nav a {
-    font-size: .68rem;
+    display: inline-block;
+    padding: .5rem 0;
+    font-size: .72rem;
     letter-spacing: .08em;
     text-decoration: none;
     text-transform: uppercase;
   }
 
-  .header-status {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
+  .header-location {
     color: var(--muted);
-    font-size: .68rem;
+    font-size: .72rem;
     letter-spacing: .06em;
     text-transform: uppercase;
   }
-  .status-light { width: .48rem; aspect-ratio: 1; border-radius: 50%; background: var(--terminal); }
 
   main { overflow: hidden; }
   section { scroll-margin-top: 2rem; }
@@ -149,7 +170,7 @@
   .hero {
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(17rem, .78fr);
-    min-height: min(48rem, calc(100vh - 5rem));
+    min-height: min(40rem, calc(100vh - 5rem));
     border-bottom: 1px solid var(--ink);
   }
 
@@ -157,57 +178,57 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: clamp(4rem, 9vw, 8rem) clamp(2rem, 6vw, 6.5rem) clamp(3.5rem, 7vw, 6rem) 0;
+    gap: 3rem;
+    padding: clamp(3.5rem, 7vw, 6.5rem) clamp(2rem, 6vw, 6.5rem) clamp(3.5rem, 6vw, 5rem) 0;
   }
 
-  .eyebrow, .section-code, .entry-index, .kicker, .meta, .evidence-label, .stack-group h3,
-  .background-meta, .footer-label {
+  .eyebrow, .section-code, .entry-index, .kicker, .evidence-label, .stack-group h3,
+  .footer-label {
     font-family: var(--mono);
     text-transform: uppercase;
     letter-spacing: .075em;
   }
 
-  .eyebrow { margin: 0 0 1.5rem; color: var(--signal); font-size: .7rem; font-weight: 700; }
+  .eyebrow { margin: 0 0 1.5rem; color: var(--signal); font-size: .75rem; font-weight: 700; }
 
   h1 {
     max-width: 13ch;
     margin: 0;
-    font-size: clamp(4.2rem, 9.5vw, 9.6rem);
+    font-size: clamp(3.2rem, 6vw, 6.2rem);
     font-weight: 400;
-    letter-spacing: -.065em;
-    line-height: .79;
+    letter-spacing: -.05em;
+    line-height: .86;
   }
 
   h1 span { display: block; margin-left: .35em; color: var(--signal); font-style: italic; }
 
   .role {
-    max-width: 54rem;
-    margin: clamp(3rem, 7vw, 6rem) 0 0;
-    font-size: clamp(1.25rem, 1.5vw, 1.65rem);
-    line-height: 1.35;
+    max-width: 34ch;
+    margin: 0;
+    font-size: clamp(1.4rem, 2vw, 2.05rem);
+    line-height: 1.3;
   }
 
   .hero-panel {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 2.5rem;
     border-left: 1px solid var(--ink);
     padding: clamp(2rem, 4vw, 4rem);
     background: rgba(248, 246, 238, .5);
   }
 
-  .scope-list { margin: 0 0 3rem; padding: 0; list-style: none; }
+  .scope-list { margin: 0; padding: 0; list-style: none; }
   .scope-list li {
     display: grid;
     grid-template-columns: 1.8rem 1fr;
     gap: .7rem;
-    padding: .75rem 0;
+    padding: .8rem 0;
     border-top: 1px solid var(--rule);
     font-family: var(--mono);
-    font-size: .72rem;
-    line-height: 1.35;
-    text-transform: uppercase;
-    letter-spacing: .05em;
+    font-size: .78rem;
+    line-height: 1.4;
   }
   .scope-list li::before { color: var(--signal); content: attr(data-index); }
 
@@ -218,7 +239,7 @@
     gap: 1rem;
     padding: .9rem 1rem;
     border: 1px solid var(--ink);
-    font: 700 .72rem/1 var(--mono);
+    font: 700 .74rem/1 var(--mono);
     letter-spacing: .06em;
     text-decoration: none;
     text-transform: uppercase;
@@ -226,6 +247,7 @@
   .button-primary { background: var(--ink); color: var(--paper); }
   .button-primary:hover { background: var(--signal); color: #fff; }
   .button-secondary:hover { background: var(--paper-raised); }
+  .contact-address { margin: .2rem 0 0; color: var(--muted); font: .78rem/1.4 var(--mono); overflow-wrap: anywhere; }
 
   .section-grid {
     display: grid;
@@ -235,24 +257,24 @@
 
   .section-heading { padding: 4rem 3rem 4rem 0; }
   .section-heading h2 {
-    max-width: 7ch;
+    max-width: 9ch;
     margin: 1rem 0 0;
     font-size: clamp(2rem, 3.5vw, 3.8rem);
     font-weight: 400;
     letter-spacing: -.035em;
     line-height: .95;
   }
-  .section-code { margin: 0; color: var(--signal); font-size: .68rem; font-weight: 700; }
+  .section-code { margin: 0; color: var(--signal); font-size: .72rem; font-weight: 700; }
 
   .section-content { border-left: 1px solid var(--ink); padding: 4rem clamp(2rem, 5vw, 5rem); }
 
-  .bio { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 6vw, 6rem); }
-  .bio p { margin: 0; font-size: clamp(1.2rem, 1.55vw, 1.58rem); line-height: 1.5; }
+  .bio { display: grid; gap: 1.5rem; max-width: 42rem; }
+  .bio p { margin: 0; font-size: clamp(1.15rem, 1.4vw, 1.4rem); line-height: 1.5; }
   .bio p:first-child::first-letter {
     float: left;
     margin: .08em .12em 0 0;
     color: var(--signal);
-    font-size: 4.4em;
+    font-size: 4.2em;
     line-height: .7;
   }
 
@@ -263,42 +285,52 @@
     grid-template-columns: 4rem minmax(0, 1fr);
     gap: clamp(1rem, 3vw, 2.5rem);
     padding: 0 0 3.5rem;
-    counter-increment: work;
   }
+  .entry:not(.child) { counter-increment: work; counter-reset: sub; }
   .entry + .entry { padding-top: 3.5rem; border-top: 1px solid var(--rule); }
-  .entry-index { padding-top: .35rem; color: var(--signal); font-size: .7rem; }
+  .entry-index { padding-top: .35rem; color: var(--signal); font-size: .74rem; }
   .entry-index::before { content: counter(work, decimal-leading-zero); }
   .entry-body { min-width: 0; }
-  .entry h3 { max-width: 31ch; margin: 0; font-size: clamp(1.45rem, 2.6vw, 2.55rem); font-weight: 400; line-height: 1.05; }
-  .meta { margin: .75rem 0 1.25rem; color: var(--muted); font-size: .67rem; line-height: 1.55; }
-  .entry-summary { max-width: 58rem; margin: 0; }
+  .entry h3 { max-width: 28ch; margin: 0; font-size: clamp(1.45rem, 2.6vw, 2.4rem); font-weight: 400; line-height: 1.08; }
+  .meta { margin: .75rem 0 1.1rem; color: var(--muted); font: .8rem/1.55 var(--mono); letter-spacing: .02em; }
+  .meta-parent { color: var(--ink); }
+  .entry-summary { max-width: 68ch; margin: 0; }
 
-  .entry.child { margin-left: 4rem; }
+  /* Un proyecto dentro de la entrada de arriba: numeración 01.1, sangría,
+     filete continuo en el color de señal y sin separador propio. */
+  .entry:has(+ .entry.child) { padding-bottom: 1.75rem; }
+  .entry.child { counter-increment: sub; margin-left: 4rem; padding-left: 1.5rem; }
+  .entry + .entry.child { border-top: 0; padding-top: 1.75rem; }
   .entry.child::after {
     position: absolute;
-    top: 0;
-    bottom: 3.5rem;
-    left: -.01rem;
+    top: 1.75rem;
+    bottom: 1.75rem;
+    left: 0;
     width: 2px;
-    background: var(--signal-soft);
+    background: var(--signal);
     content: "";
   }
-  .entry.child + .entry.child::after { top: 3.5rem; }
-  .entry.child h3 { font-size: clamp(1.25rem, 2vw, 1.85rem); }
+  .entry.child .entry-index::before { content: counter(work, decimal-leading-zero) "." counter(sub); }
+  .entry.child h3 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); }
+  .entry.child .meta { margin-bottom: .6rem; }
 
   .evidence { display: flex; flex-wrap: wrap; align-items: baseline; gap: .55rem 1rem; margin-top: 1.4rem; }
-  .evidence-label { color: var(--muted); font-size: .62rem; }
-  .evidence a {
-    font: 700 .69rem/1.4 var(--mono);
+  .evidence-label { color: var(--muted); font-size: .7rem; }
+  .evidence a, .evidence-note {
+    font: 700 .74rem/1.4 var(--mono);
     letter-spacing: .04em;
-    text-decoration-color: var(--signal-soft);
-    text-transform: uppercase;
   }
+  .evidence a { text-decoration-color: var(--signal-soft); text-transform: uppercase; }
+  .evidence-note { color: var(--muted); font-weight: 400; }
+
+  .antecedents { margin: 0; padding: 1.5rem 0 0; border-top: 1px solid var(--rule); list-style: none; }
+  .antecedents li { color: var(--muted); font: .8rem/1.6 var(--mono); }
+  .antecedents li span:first-child { color: var(--signal); margin-right: .6rem; text-transform: uppercase; letter-spacing: .075em; }
 
   .capabilities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3rem; }
   .stack-group { padding: 0 0 2rem; }
   .stack-group:nth-child(n + 3) { padding-top: 2rem; border-top: 1px solid var(--rule); }
-  .stack-group h3 { margin: 0 0 1.1rem; color: var(--signal); font-size: .68rem; }
+  .stack-group h3 { margin: 0 0 1.1rem; color: var(--signal); font-size: .72rem; }
   .stack-group ul { margin: 0; padding: 0; list-style: none; }
   .stack-group li { padding: .5rem 0; border-top: 1px dotted var(--rule-strong); }
   .stack-group li:first-child { border-top: 0; }
@@ -306,7 +338,7 @@
   .background-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
   .background-item { padding-top: 1.25rem; border-top: 3px solid var(--ink); }
   .background-item h3 { margin: 0 0 .7rem; font-size: 1.2rem; line-height: 1.2; }
-  .background-meta { margin: 0; color: var(--muted); font-size: .63rem; line-height: 1.55; }
+  .background-meta { margin: 0; color: var(--muted); font: .8rem/1.55 var(--mono); letter-spacing: .02em; }
 
   .elsewhere { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
   .elsewhere-intro { margin: 0; font-size: clamp(1.35rem, 2vw, 2rem); line-height: 1.25; }
@@ -314,14 +346,17 @@
   .link-list a {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     padding: 1rem 0;
     border-bottom: 1px solid var(--rule);
-    font: 700 .72rem/1 var(--mono);
+    font: 700 .74rem/1.2 var(--mono);
     letter-spacing: .06em;
     text-decoration: none;
     text-transform: uppercase;
   }
   .link-list a::after { content: "↗"; color: var(--signal); }
+  .link-list a[href^="mailto:"] { text-transform: none; letter-spacing: .02em; }
+  .link-list a[href^="mailto:"]::after { content: "→"; }
 
   footer {
     display: grid;
@@ -330,9 +365,9 @@
     align-items: end;
     padding-block: 2rem 3rem;
     color: var(--muted);
-    font-size: .78rem;
+    font-size: .8rem;
   }
-  .footer-label { margin: 0; font-size: .64rem; }
+  .footer-label { margin: 0; font-size: .7rem; }
   footer p:last-child { margin: 0; text-align: right; }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -348,12 +383,11 @@
   }
 
   @media (max-width: 64rem) {
-    .site-header { grid-template-columns: 1fr auto; }
-    .site-nav { grid-column: 1 / -1; grid-row: 2; justify-self: stretch; padding: .85rem 0; border-top: 1px solid var(--rule); }
-    .site-nav ul { flex-wrap: wrap; justify-content: flex-start; }
+    .site-header { grid-template-columns: 1fr auto; padding-top: .75rem; }
+    .site-nav { grid-column: 1 / -1; grid-row: 2; justify-self: stretch; padding: .35rem 0; border-top: 1px solid var(--rule); }
+    .site-nav ul { justify-content: flex-start; }
     .hero { min-height: auto; }
     .hero-copy { padding-right: 3rem; }
-    h1 { font-size: clamp(4rem, 11vw, 7rem); }
     .section-grid { grid-template-columns: 12rem minmax(0, 1fr); }
     .section-heading { padding-right: 2rem; }
     .section-content { padding-inline: 2.5rem; }
@@ -361,46 +395,24 @@
 
   @media (max-width: 46rem) {
     .shell { width: min(calc(100% - 2rem), var(--max)); }
-    .header-status { display: none; }
+    .header-location { display: none; }
+    .site-nav ul { flex-wrap: wrap; gap: 0 1.1rem; }
+    .site-nav a { white-space: nowrap; padding: .45rem 0; }
     .hero, .section-grid { grid-template-columns: 1fr; }
-    .hero-copy { min-height: 34rem; padding: 4rem 0 3rem; }
-    h1 { font-size: clamp(3.8rem, 21vw, 6.8rem); }
-    .role { margin-top: 3rem; }
+    .hero-copy { gap: 2rem; padding: 2.75rem 0 2.25rem; }
+    h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
     .hero-panel, .section-content { border-left: 0; }
-    .hero-panel { padding: 2.5rem 0 3rem; border-top: 1px solid var(--ink); background: transparent; }
+    .hero-panel { padding: 2rem 0 2.5rem; border-top: 1px solid var(--ink); background: transparent; }
+    .hero-panel .actions { order: -1; }
     .section-heading { padding: 3rem 0 2rem; }
     .section-heading h2 { max-width: none; }
     .section-content { padding: 0 0 3.5rem; }
-    .bio, .capabilities, .background-list, .elsewhere { grid-template-columns: 1fr; }
-    .bio { gap: 2rem; }
-    .entry { grid-template-columns: 2.4rem minmax(0, 1fr); gap: .7rem; }
-    .entry.child { margin-left: 1.2rem; }
+    .capabilities, .background-list, .elsewhere { grid-template-columns: 1fr; }
+    .entry { grid-template-columns: 2.8rem minmax(0, 1fr); gap: .7rem; }
+    .entry.child { margin-left: 1.2rem; padding-left: 1rem; }
     .stack-group:nth-child(2) { padding-top: 2rem; border-top: 1px solid var(--rule); }
     footer { grid-template-columns: 1fr; }
     footer p:last-child { text-align: left; }
-  }
-
-  @media print {
-    :root { --paper: #fff; --paper-raised: #fff; --ink: #000; --muted: #3f3f3f; --rule: #aaa; --signal: #7a210b; }
-    html { font-size: 10pt; }
-    body { background: #fff; }
-    .shell { width: 100%; }
-    .site-header, .hero-panel, .skip-link, .evidence, #elsewhere { display: none; }
-    .hero { display: block; min-height: 0; padding: 0 0 2rem; }
-    .hero-copy { display: block; padding: 2rem 0; }
-    h1 { max-width: none; font-size: 42pt; }
-    h1 span { display: inline; margin-left: .15em; }
-    .role { margin-top: 1.5rem; }
-    .section-grid { display: block; break-before: auto; }
-    .section-heading { padding: 1.5rem 0 .75rem; }
-    .section-heading h2 { max-width: none; font-size: 20pt; }
-    .section-content { padding: 0 0 1.5rem; border-left: 0; }
-    .bio p { font-size: 11pt; }
-    .entry, .background-item, .stack-group { break-inside: avoid; }
-    .entry { padding-bottom: 1.5rem; }
-    .entry + .entry { padding-top: 1.5rem; }
-    .entry.child::after { bottom: 1.5rem; }
-    footer { padding: 1rem 0 0; }
   }
 </style>
 </head>
@@ -414,36 +426,37 @@
   </a>
   <nav class="site-nav" aria-label="Main navigation">
     <ul>
-      <li><a href="#about">About</a></li>
+      <li><a href="#approach">Approach</a></li>
       <li><a href="#work">Selected work</a></li>
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#background">Background</a></li>
-      <li><a href="#elsewhere">Elsewhere</a></li>
+      <li><a href="#elsewhere">Contact</a></li>
     </ul>
   </nav>
-  <span class="header-status"><span class="status-light" aria-hidden="true"></span>Vestmannaeyjar, Iceland · UTC+0</span>
+  <span class="header-location">Vestmannaeyjar, Iceland · UTC+0</span>
 </header>
 
 <main id="main-content">
   <section class="hero shell" id="top" aria-labelledby="hero-title">
     <div class="hero-copy">
       <div>
-        <p class="eyebrow">Applied AI · business automation · practical training</p>
+        <p class="eyebrow">Applied AI &amp; automation · Tensoria Consulting</p>
         <h1 id="hero-title">Federico <span>Bonino</span></h1>
       </div>
-      <p class="role">Applied AI &amp; Automation Consultant — building an independent practice for AI solution discovery, business automation and practical training, backed by long experience in Linux infrastructure, edge systems and production operations.</p>
+      <p class="role">I help organisations turn manual, scattered processes into systems that work — using AI where it adds value, and deterministic software where certainty is required.</p>
     </div>
-    <aside class="hero-panel" aria-label="Professional scope and downloads">
-      <ol class="scope-list">
-        <li data-index="01">Applied AI consulting</li>
-        <li data-index="02">Business process automation</li>
-        <li data-index="03">Practical AI training</li>
-        <li data-index="04">Reliable delivery &amp; handover</li>
+    <div class="hero-panel">
+      <ol class="scope-list" aria-label="What I work on">
+        <li data-index="01">Software development with AI agents</li>
+        <li data-index="02">Process mapping &amp; automation</li>
+        <li data-index="03">Applied AI consulting &amp; training</li>
+        <li data-index="04">Linux infrastructure that runs unattended</li>
       </ol>
       <div class="actions">
-        <a class="button button-primary" href="https://linkedin.com/in/fede-azul">
-          <span>Start a conversation</span><span aria-hidden="true">↗</span>
+        <a class="button button-primary" href="mailto:contacto@tensoriaconsulting.com">
+          <span>Start a conversation</span><span aria-hidden="true">→</span>
         </a>
+        <p class="contact-address">contacto@tensoriaconsulting.com</p>
         <a class="button button-secondary" href="downloads/federico-bonino-profile.pdf" download>
           <span>Download public profile</span><span aria-hidden="true">↓</span>
         </a>
@@ -451,29 +464,26 @@
           <span>Inspect selected work</span><span aria-hidden="true">↘</span>
         </a>
       </div>
-    </aside>
+    </div>
   </section>
 
-  <section class="section-grid shell" id="about" aria-labelledby="about-title">
+  <section class="section-grid shell" id="approach" aria-labelledby="approach-title">
     <div class="section-heading">
-      <p class="section-code">00 / Position</p>
-      <h2 id="about-title">Understand first, then build</h2>
+      <p class="section-code">00 / Approach</p>
+      <h2 id="approach-title">Understand first, then build</h2>
     </div>
     <div class="section-content bio">
-      <p>For the last six years I have been the technology partner of BM Estudio
-Contable, an accounting practice with more than a hundred clients. It started
-with the office network and server and grew into mapping how information moves
-through the firm, then building the internal tool it runs on every day and a
-client portal now in pilot. The process map came first: every application
-derives its requirements from it, not the other way round.</p>
-      <p>At AlterMundi — a twelve-person organisation building free infrastructure for
-community networks — I ran the infrastructure, helped stand up an independent
-Autonomous System, and architected SAI, a wildfire early-detection pilot whose
-edge nodes watched the Córdoba hills unattended for months.</p>
-      <p>I develop with coding agents under explicit architecture, review and
-verification, and I am now building an independent applied-AI practice:
-research the right solution before building, automate the processes an
-organisation already has, and leave the team able to run what it receives.</p>
+      <p>I start by understanding how an organisation actually works: who does what,
+with which systems, and where the work gets stuck. Only then do I build —
+developing with coding agents under explicit architecture, review and
+verification, and leaving the team able to run what it receives. I do this
+work through Tensoria Consulting.</p>
+      <p>Since 2020 I have been the technology partner of an accounting practice: first
+its office infrastructure, then a map of how information moves through the
+firm, then the internal tool it runs on and a client portal now in pilot.</p>
+      <p>At AlterMundi, a community-networks organisation, I ran the infrastructure and
+architected SAI, a wildfire early-detection pilot whose edge nodes worked
+unattended for months.</p>
     </div>
   </section>
 
@@ -489,9 +499,13 @@ organisation already has, and leave the team able to run what it receives.</p>
           <h3>Technology partner — accounting practice</h3>
           <p class="meta">
 <a href="https://bmestudiocontable.com/">BM Estudio Contable (client, Santa Rosa, Argentina)</a> · Infrastructure, process analysis and software development ·
-            <time datetime="2020-01">2020-01</time> –
-Present          </p>
-          <p class="entry-summary">Continuous, growing engagement with a 100+ client accounting practice since 2020: from building and running its office infrastructure, to mapping how information moves through the firm, to software now used in daily operations and a client portal in pilot. Built with agent-assisted development under explicit architecture, review and verification. About 1,200 commits across five private repositories.</p>
+            <span class="date-range"><time datetime="2020-01">2020-01</time> – Present</span>
+          </p>
+          <p class="entry-summary">Technology partner of a 100+ client accounting practice since 2020. The work grew from office infrastructure to mapping how information moves through the firm with its team, and then to the software it runs on.</p>
+          <div class="evidence">
+            <span class="evidence-label">Evidence</span>
+            <span class="evidence-note">Client work · source code is private</span>
+          </div>
         </div>
       </article>
       <article class="entry child">
@@ -499,10 +513,10 @@ Present          </p>
         <div class="entry-body">
           <h3>Client portal and accounting engine (pilot)</h3>
           <p class="meta">
-Architecture and implementation ·
-            <time datetime="2026-09">2026-09</time> –
-Present          </p>
-          <p class="entry-summary">Client portal and studio console over a deterministic accounting engine: clients record payments, collections and commitments and see their cash position and deadlines; the firm reviews them against records imported from its legacy accounting system and documents from the tax-authority portal. In pilot with a real client.</p>
+<span class="meta-parent">BM Estudio Contable ›</span> Architecture and implementation ·
+            <span class="date-range"><time datetime="2026-09">2026-09</time> – Present</span>
+          </p>
+          <p class="entry-summary">A portal where the firm&#39;s clients record payments and follow their cash and deadlines, reviewed by the firm. In pilot with a real client.</p>
         </div>
       </article>
       <article class="entry child">
@@ -510,10 +524,10 @@ Present          </p>
         <div class="entry-body">
           <h3>BM Utilidades — internal operations tool</h3>
           <p class="meta">
-Concept, architecture and implementation ·
-            <time datetime="2025-05">2025-05</time> –
-Present          </p>
-          <p class="entry-summary">Web application for a 100+ client accounting practice: unified client data, automated retrieval from the AFIP tax portal, format conversion and document preprocessing for ingestion and migration between accounting software. In daily use by the firm, within a continuous engagement that began with its office infrastructure in 2020.</p>
+<span class="meta-parent">BM Estudio Contable ›</span> Concept, architecture and implementation ·
+            <span class="date-range"><time datetime="2025-05">2025-05</time> – Present</span>
+          </p>
+          <p class="entry-summary">Internal web tool the firm runs on every day: client data in one place, automated retrieval from the tax portal, document conversion and tax-status monitoring.</p>
         </div>
       </article>
       <article class="entry">
@@ -522,8 +536,8 @@ Present          </p>
           <h3>Technical lead — infrastructure and deployed systems</h3>
           <p class="meta">
 <a href="https://altermundi.net/">AlterMundi</a> · Technical lead ·
-            <time datetime="2024-06">2024-06</time> –
-<time datetime="2026-08">2026-08</time>          </p>
+            <span class="date-range"><time datetime="2024-06">2024-06</time> – <time datetime="2026-08">2026-08</time></span>
+          </p>
           <p class="entry-summary">Led technical direction across AlterMundi&#39;s production infrastructure and field-deployed systems: brought its infrastructure into an inventoried, documented operating model and established shared architecture, review and verification conventions. Twelve-person collaborative organisation, no direct reports. Cycle concluded August 2026.</p>
         </div>
       </article>
@@ -532,10 +546,10 @@ Present          </p>
         <div class="entry-body">
           <h3>SAI — distributed wildfire early detection (validated pilot)</h3>
           <p class="meta">
-Architect and lead developer ·
-            <time datetime="2024-11">2024-11</time> –
-<time datetime="2026-02">2026-02</time>          </p>
-          <p class="entry-summary">Architect and lead developer of a distributed wildfire early-detection system: edge nodes running computer-vision inference in the field, with fleet management, ingestion and dashboard on top. Three nodes ran continuously for months in Córdoba; field evaluation at the La Rancherita node reached F1 ≈ 0.86 in situ. The detection model was a specialist&#39;s work; I built and operated the system around it — edge fleet, ingestion pipeline, inference service and dashboard. My work on the funded pilot concluded when its funding cycle ended. AGPL-3.0.</p>
+<span class="meta-parent">AlterMundi ›</span> Architect and lead developer ·
+            <span class="date-range"><time datetime="2024-11">2024-11</time> – <time datetime="2026-02">2026-02</time></span>
+          </p>
+          <p class="entry-summary">Edge computer-vision nodes, fleet, ingestion pipeline, inference service and dashboard for a wildfire early-detection pilot. Three nodes ran unattended for months in the Córdoba hills; field F1 ≈ 0.86. The detection model was a specialist&#39;s work; I built and operated the system around it.</p>
           <div class="evidence" aria-label="Public evidence for SAI — distributed wildfire early detection (validated pilot)">
             <span class="evidence-label">Public evidence</span>
               <a href="https://github.com/AlterMundi/sai-cam">sai-cam <span aria-hidden="true">↗</span></a>
@@ -548,8 +562,8 @@ Architect and lead developer ·
           <h3>Kjarabót + Skattaskýr — Icelandic labour and tax clarity (pilot)</h3>
           <p class="meta">
 Independent project · Concept, architecture and implementation ·
-            <time datetime="2026-06">2026-06</time> –
-Present          </p>
+            <span class="date-range"><time datetime="2026-06">2026-06</time> – Present</span>
+          </p>
           <p class="entry-summary">Citation-first case-building assistant for workers in Iceland: answers only from a versioned authoritative corpus, delegates wage and tax arithmetic to Skattaskyr, and says so explicitly when authority or coverage is missing. Pilot: the corpus covers three collective-agreement families; production certification is pending.</p>
           <div class="evidence" aria-label="Public evidence for Kjarabót + Skattaskýr — Icelandic labour and tax clarity (pilot)">
             <span class="evidence-label">Public evidence</span>
@@ -563,8 +577,8 @@ Present          </p>
           <h3>WhisperAloud — offline voice dictation for Linux</h3>
           <p class="meta">
 Independent project · Design, implementation and maintenance ·
-            <time datetime="2025-11">2025-11</time> –
-<time datetime="2026-06">2026-06</time>          </p>
+            <span class="date-range"><time datetime="2025-11">2025-11</time> – <time datetime="2026-06">2026-06</time></span>
+          </p>
           <p class="entry-summary">Offline voice dictation for the Linux desktop, built for daily writing rather than demo transcription: a D-Bus daemon owns recording, faster-whisper transcription, SQLite history and clipboard actions; the GTK4 GUI, tray indicator and CLI are thin clients. Built end to end and in daily use as a working tool.</p>
           <div class="evidence" aria-label="Public evidence for WhisperAloud — offline voice dictation for Linux">
             <span class="evidence-label">Public evidence</span>
@@ -572,16 +586,9 @@ Independent project · Design, implementation and maintenance ·
           </div>
         </div>
       </article>
-      <article class="entry">
-        <span class="entry-index" aria-hidden="true"></span>
-        <div class="entry-body">
-          <h3>TV Technician — live 24/7 broadcast</h3>
-          <p class="meta">
-Canal Showsport S.A. · Staff technician — broadcast operations and reliability ·
-            <time datetime="2011-11">2011-11</time> –
-<time datetime="2022-12">2022-12</time>          </p>
-        </div>
-      </article>
+      <ul class="antecedents" aria-label="Earlier work">
+        <li><span>Earlier</span>TV Technician — live 24/7 broadcast — Canal Showsport S.A. · <span class="date-range">2011–2022</span></li>
+      </ul>
     </div>
   </section>
 
@@ -591,33 +598,17 @@ Canal Showsport S.A. · Staff technician — broadcast operations and reliabilit
       <h2 id="capabilities-title">Working set</h2>
     </div>
     <div class="section-content capabilities">
-      <section class="stack-group" aria-labelledby="skill-group-1">
-        <h3 id="skill-group-1">Languages</h3>
-        <ul>
-          <li>Python</li>
-          <li>Bash</li>
-          <li>C</li>
-        </ul>
-      </section>
-      <section class="stack-group" aria-labelledby="skill-group-2">
-        <h3 id="skill-group-2">Infrastructure</h3>
-        <ul>
-          <li>Proxmox VE</li>
-          <li>LXC</li>
-          <li>systemd</li>
-          <li>nginx</li>
-          <li>BGP</li>
-        </ul>
-      </section>
-      <section class="stack-group" aria-labelledby="skill-group-3">
-        <h3 id="skill-group-3">AI and tooling</h3>
+      <div class="stack-group">
+        <h3>AI and tooling</h3>
         <ul>
           <li>Agent-assisted development workflows (Claude Code)</li>
           <li>YOLO / Ultralytics deployment on edge</li>
+          <li>Citation-grounded RAG</li>
+          <li>Whisper / whisper.cpp</li>
         </ul>
-      </section>
-      <section class="stack-group" aria-labelledby="skill-group-4">
-        <h3 id="skill-group-4">Domains</h3>
+      </div>
+      <div class="stack-group">
+        <h3>Domains</h3>
         <ul>
           <li>Business process analysis and automation</li>
           <li>Linux infrastructure design and operations</li>
@@ -626,7 +617,25 @@ Canal Showsport S.A. · Staff technician — broadcast operations and reliabilit
           <li>Mesh networking and BGP</li>
           <li>Embedded systems and electronics</li>
         </ul>
-      </section>
+      </div>
+      <div class="stack-group">
+        <h3>Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>Bash</li>
+          <li>C</li>
+        </ul>
+      </div>
+      <div class="stack-group">
+        <h3>Infrastructure</h3>
+        <ul>
+          <li>Proxmox VE</li>
+          <li>LXC</li>
+          <li>systemd</li>
+          <li>nginx</li>
+          <li>BGP</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -638,23 +647,24 @@ Canal Showsport S.A. · Staff technician — broadcast operations and reliabilit
     <div class="section-content background-list">
       <article class="background-item">
         <h3>Diplomatura Universitaria en Ciencia de Datos, Inteligencia Artificial y Econometría</h3>
-        <p class="background-meta">FAMAF — Universidad Nacional de Córdoba · 2024-03 – 2024-12</p>
+        <p class="background-meta">FAMAF — Universidad Nacional de Córdoba · <span class="date-range">2024-03 – 2024-12</span></p>
       </article>
       <article class="background-item">
         <h3>Electronic Engineering — undergraduate studies (no degree)</h3>
-        <p class="background-meta">UNC y UTN — Facultad Regional Córdoba · 2005 – 2015-11</p>
+        <p class="background-meta">UNC y UTN — Facultad Regional Córdoba · <span class="date-range">2005 – 2015-11</span></p>
       </article>
     </div>
   </section>
 
   <section class="section-grid shell" id="elsewhere" aria-labelledby="elsewhere-title">
     <div class="section-heading">
-      <p class="section-code">04 / Elsewhere</p>
-      <h2 id="elsewhere-title">Follow the work</h2>
+      <p class="section-code">04 / Contact</p>
+      <h2 id="elsewhere-title">Get in touch</h2>
     </div>
     <div class="section-content elsewhere">
-      <p class="elsewhere-intro">Code, professional history, and the public record behind this work.</p>
+      <p class="elsewhere-intro">Write about the process you want to change, or follow the code and professional record behind this work.</p>
       <ul class="link-list">
+        <li><a href="mailto:contacto@tensoriaconsulting.com">contacto@tensoriaconsulting.com</a></li>
         <li><a href="https://github.com/fede654" rel="me">GitHub</a></li>
         <li><a href="https://linkedin.com/in/fede-azul" rel="me">LinkedIn</a></li>
       </ul>
